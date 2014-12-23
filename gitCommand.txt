@@ -1,0 +1,32 @@
+1.git config --global user.name "Cdroc"			//设置用户名
+  git config --global user.email "Cdroc87@gmail.com"	//设置邮箱
+2.mkdir learngit	//创建learngit目录
+  cd learngit		//打开learngit目录
+  pwd			//显示当前目录路径
+  git init		//把当前目录变成Git可以管理的仓库
+  vim readme.txt	//用vim打开readme.txt
+  (注释：i、a、s进入编辑状态；Esc退出编辑状态；:wq保存并退出vim :exit()退出vim)
+  git add readme.txt	//把readme.txt添加到仓库（注释：没有任何提示，表示添加成功！）
+  git commit -m "wrote a readme file"	//把文件提交到仓库
+3.git status		//查看仓库当前的状态
+  git diff		//查看修改内容
+4.git log		//显示从最近到最远的提交日志
+  git log --pretty=oneline	//简化显示日志
+  (HEAD当前版本、HEAD^上一个版本、HEAD^^上上一个版本、HEAD~100往上100个版本）
+  git reset --hard HEAD^	//回退的到上一个版本
+  cat readme.txt	//查看readme.txt内容
+  git reset --hard 3628164	//回到指定版本（3628164为版本号的前几位）
+  git reflog		//记录的每一次命令
+5.vim test.txt		//新建件test.txt，并打开
+  git diff HEAD -- readme.txt	//对比当前件readme.txt的不同
+6.git checkout -- readme.txt	//把readme.txt件在工作区的修改全部撤销（回到最近一次git commit 或 git add 时的状态）
+  git reset HEAD readme.txt	//把readme.txt暂存区的修改撤销掉，重新放回工作区
+  rm test.txt			//删除test.txt
+  git rm test.txt		//从版本库中删除（git commit提交删除）
+  git checkout -- test.txt	//恢复删除（git checkout -- file 用版本库的版本替换工作区的版本）
+7.ssh -keygen -t rsa -C "Cdroc87@gmail.com"	//创建SSH Key（.ssh目录->id_rsa私钥，id_rsa.pub公钥）
+8.touch test.txt		//创建test.txt
+  git remote add origin https://github.com/Cdroc/gitLearn.git	//在本地添加远程库origin
+  git push -u origin master	//把本地库的所有内容推送到远程库上
+  （第一次推送master分支时，加-u，可以把本地master和远程master关联起来）
+  
