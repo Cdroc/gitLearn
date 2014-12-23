@@ -33,10 +33,20 @@
   （https://github.com/Cdroc/gitLearn.git 速度慢，每次推送都必须输入口令，
     git@github.com:Cdroc/gitLearn.git 默认的git://使用ssh,通过ssh支持的原生git协议速度最快）
 10.git checkout -b dev		//创建并切换到分支dev
-  git branch dev		//创建分支dev
-  git checkout dev		//切换到分支dev
-  git branch			//查看所有分支（前面有*号的分支为当前分支）
-  git merge dev			//合并指定分支到当前分支
+   git branch dev		//创建分支dev
+   git checkout dev		//切换到分支dev
+   git branch			//查看所有分支（前面有*号的分支为当前分支）
+   git merge dev			//合并指定分支到当前分支
   （先执行git branch master,切换到分支master,再执行git merge dev,合并指定分支dev到当前分支master）
-  git branch -d dev		//删除dev分支
-  
+   git branch -d dev		//删除dev分支
+11.git log --graph --pretty=oneline --abbrev-commit	//查看分支合并图
+12.git merge --no-ff -m "merge with no-ff" dev	//合并时，禁用Fast forward模式
+   （加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出曾经做过合并，而fast forward合并就看不出曾经做过合并）
+   git log			//查看分支历史
+13.git stash			//把当前工作现场“储藏”起来
+   git stash list		//查看储藏的工作现场
+   git stash apply		//恢复工作现场，但stash内容并不删除
+   git stash drop		//删除stash储藏的工作内容
+   git stash pop		//恢复工作现场的同时把stash内容也删了
+   git stash apply stash@{0}	//恢复指定的工作现场
+14.git branch -D feature	//强行删除未合并的feature分支
