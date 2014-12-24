@@ -1,52 +1,52 @@
-1.git config --global user.name "Cdroc"			//ÉèÖÃÓÃ»§Ãû
-  git config --global user.email "Cdroc87@gmail.com"	//ÉèÖÃÓÊÏä
-2.mkdir learngit	//´´½¨learngitÄ¿Â¼
-  cd learngit		//´ò¿ªlearngitÄ¿Â¼
-  pwd			//ÏÔÊ¾µ±Ç°Ä¿Â¼Â·¾¶
-  git init		//°Ñµ±Ç°Ä¿Â¼±ä³ÉGit¿ÉÒÔ¹ÜÀíµÄ²Ö¿â
-  vim readme.txt	//ÓÃvim´ò¿ªreadme.txt
-  (×¢ÊÍ£ºi¡¢a¡¢s½øÈë±à¼­×´Ì¬£»EscÍË³ö±à¼­×´Ì¬£»:wq±£´æ²¢ÍË³övim :exit()ÍË³övim)
-  git add readme.txt	//°Ñreadme.txtÌí¼Óµ½²Ö¿â£¨×¢ÊÍ£ºÃ»ÓĞÈÎºÎÌáÊ¾£¬±íÊ¾Ìí¼Ó³É¹¦£¡£©
-  git commit -m "wrote a readme file"	//°ÑÎÄ¼şÌá½»µ½²Ö¿â
-3.git status		//²é¿´²Ö¿âµ±Ç°µÄ×´Ì¬
-  git diff		//²é¿´ĞŞ¸ÄÄÚÈİ
-4.git log		//ÏÔÊ¾´Ó×î½üµ½×îÔ¶µÄÌá½»ÈÕÖ¾
-  git log --pretty=oneline	//¼ò»¯ÏÔÊ¾ÈÕÖ¾
-  (HEADµ±Ç°°æ±¾¡¢HEAD^ÉÏÒ»¸ö°æ±¾¡¢HEAD^^ÉÏÉÏÒ»¸ö°æ±¾¡¢HEAD~100ÍùÉÏ100¸ö°æ±¾£©
-  git reset --hard HEAD^	//»ØÍËµÄµ½ÉÏÒ»¸ö°æ±¾
-  cat readme.txt	//²é¿´readme.txtÄÚÈİ
-  git reset --hard 3628164	//»Øµ½Ö¸¶¨°æ±¾£¨3628164Îª°æ±¾ºÅµÄÇ°¼¸Î»£©
-  git reflog		//¼ÇÂ¼µÄÃ¿Ò»´ÎÃüÁî
-5.vim test.txt		//ĞÂ½¨¼ştest.txt£¬²¢´ò¿ª
-  git diff HEAD -- readme.txt	//¶Ô±Èµ±Ç°¼şreadme.txtµÄ²»Í¬
-6.git checkout -- readme.txt	//°Ñreadme.txt¼şÔÚ¹¤×÷ÇøµÄĞŞ¸ÄÈ«²¿³·Ïú£¨»Øµ½×î½üÒ»´Îgit commit »ò git add Ê±µÄ×´Ì¬£©
-  git reset HEAD readme.txt	//°Ñreadme.txtÔİ´æÇøµÄĞŞ¸Ä³·Ïúµô£¬ÖØĞÂ·Å»Ø¹¤×÷Çø
-  rm test.txt			//É¾³ıtest.txt
-  git rm test.txt		//´Ó°æ±¾¿âÖĞÉ¾³ı£¨git commitÌá½»É¾³ı£©
-  git checkout -- test.txt	//»Ö¸´É¾³ı£¨git checkout -- file ÓÃ°æ±¾¿âµÄ°æ±¾Ìæ»»¹¤×÷ÇøµÄ°æ±¾£©
-7.ssh -keygen -t rsa -C "Cdroc87@gmail.com"	//´´½¨SSH Key£¨.sshÄ¿Â¼->id_rsaË½Ô¿£¬id_rsa.pub¹«Ô¿£©
-8.touch test.txt		//´´½¨test.txt
-  git remote add origin https://github.com/Cdroc/gitLearn.git	//ÔÚ±¾µØÌí¼ÓÔ¶³Ì¿âorigin
-  git push -u origin master	//°Ñ±¾µØ¿âµÄËùÓĞÄÚÈİÍÆËÍµ½Ô¶³Ì¿âÉÏ
-  £¨µÚÒ»´ÎÍÆËÍmaster·ÖÖ§Ê±£¬¼Ó-u£¬¿ÉÒÔ°Ñ±¾µØmasterºÍÔ¶³Ìmaster¹ØÁªÆğÀ´£©
-9.git clone https://github.com/Cdroc/gitLearn.git		//¿ËÂ¡Ô¶³Ì¿âµ½±¾µØ¿â
-  £¨https://github.com/Cdroc/gitLearn.git ËÙ¶ÈÂı£¬Ã¿´ÎÍÆËÍ¶¼±ØĞëÊäÈë¿ÚÁî£¬
-    git@github.com:Cdroc/gitLearn.git Ä¬ÈÏµÄgit://Ê¹ÓÃssh,Í¨¹ısshÖ§³ÖµÄÔ­ÉúgitĞ­ÒéËÙ¶È×î¿ì£©
-10.git checkout -b dev		//´´½¨²¢ÇĞ»»µ½·ÖÖ§dev
-   git branch dev		//´´½¨·ÖÖ§dev
-   git checkout dev		//ÇĞ»»µ½·ÖÖ§dev
-   git branch			//²é¿´ËùÓĞ·ÖÖ§£¨Ç°ÃæÓĞ*ºÅµÄ·ÖÖ§Îªµ±Ç°·ÖÖ§£©
-   git merge dev			//ºÏ²¢Ö¸¶¨·ÖÖ§µ½µ±Ç°·ÖÖ§
-  £¨ÏÈÖ´ĞĞgit branch master,ÇĞ»»µ½·ÖÖ§master,ÔÙÖ´ĞĞgit merge dev,ºÏ²¢Ö¸¶¨·ÖÖ§devµ½µ±Ç°·ÖÖ§master£©
-   git branch -d dev		//É¾³ıdev·ÖÖ§
-11.git log --graph --pretty=oneline --abbrev-commit	//²é¿´·ÖÖ§ºÏ²¢Í¼
-12.git merge --no-ff -m "merge with no-ff" dev	//ºÏ²¢Ê±£¬½ûÓÃFast forwardÄ£Ê½
-   £¨¼ÓÉÏ--no-ff²ÎÊı¾Í¿ÉÒÔÓÃÆÕÍ¨Ä£Ê½ºÏ²¢£¬ºÏ²¢ºóµÄÀúÊ·ÓĞ·ÖÖ§£¬ÄÜ¿´³öÔø¾­×ö¹ıºÏ²¢£¬¶øfast forwardºÏ²¢¾Í¿´²»³öÔø¾­×ö¹ıºÏ²¢£©
-   git log			//²é¿´·ÖÖ§ÀúÊ·
-13.git stash			//°Ñµ±Ç°¹¤×÷ÏÖ³¡¡°´¢²Ø¡±ÆğÀ´
-   git stash list		//²é¿´´¢²ØµÄ¹¤×÷ÏÖ³¡
-   git stash apply		//»Ö¸´¹¤×÷ÏÖ³¡£¬µ«stashÄÚÈİ²¢²»É¾³ı
-   git stash drop		//É¾³ıstash´¢²ØµÄ¹¤×÷ÄÚÈİ
-   git stash pop		//»Ö¸´¹¤×÷ÏÖ³¡µÄÍ¬Ê±°ÑstashÄÚÈİÒ²É¾ÁË
-   git stash apply stash@{0}	//»Ö¸´Ö¸¶¨µÄ¹¤×÷ÏÖ³¡
-14.git branch -D feature	//Ç¿ĞĞÉ¾³ıÎ´ºÏ²¢µÄfeature·ÖÖ§
+1.git config --global user.name "Cdroc"			//è®¾ç½®ç”¨æˆ·å
+  git config --global user.email "Cdroc87@gmail.com"	//è®¾ç½®é‚®ç®±
+2.mkdir learngit	//åˆ›å»ºlearngitç›®å½•
+  cd learngit		//æ‰“å¼€learngitç›®å½•
+  pwd			//æ˜¾ç¤ºå½“å‰ç›®å½•è·¯å¾„
+  git init		//æŠŠå½“å‰ç›®å½•å˜æˆGitå¯ä»¥ç®¡ç†çš„ä»“åº“
+  vim readme.txt	//ç”¨vimæ‰“å¼€readme.txt
+  (æ³¨é‡Šï¼šiã€aã€sè¿›å…¥ç¼–è¾‘çŠ¶æ€ï¼›Escé€€å‡ºç¼–è¾‘çŠ¶æ€ï¼›:wqä¿å­˜å¹¶é€€å‡ºvim :exit()é€€å‡ºvim)
+  git add readme.txt	//æŠŠreadme.txtæ·»åŠ åˆ°ä»“åº“ï¼ˆæ³¨é‡Šï¼šæ²¡æœ‰ä»»ä½•æç¤ºï¼Œè¡¨ç¤ºæ·»åŠ æˆåŠŸï¼ï¼‰
+  git commit -m "wrote a readme file"	//æŠŠæ–‡ä»¶æäº¤åˆ°ä»“åº“
+3.git status		//æŸ¥çœ‹ä»“åº“å½“å‰çš„çŠ¶æ€
+  git diff		//æŸ¥çœ‹ä¿®æ”¹å†…å®¹
+4.git log		//æ˜¾ç¤ºä»æœ€è¿‘åˆ°æœ€è¿œçš„æäº¤æ—¥å¿—
+  git log --pretty=oneline	//ç®€åŒ–æ˜¾ç¤ºæ—¥å¿—
+  (HEADå½“å‰ç‰ˆæœ¬ã€HEAD^ä¸Šä¸€ä¸ªç‰ˆæœ¬ã€HEAD^^ä¸Šä¸Šä¸€ä¸ªç‰ˆæœ¬ã€HEAD~100å¾€ä¸Š100ä¸ªç‰ˆæœ¬ï¼‰
+  git reset --hard HEAD^	//å›é€€åˆ°ä¸Šä¸€ä¸ªç‰ˆæœ¬
+  cat readme.txt	//æŸ¥çœ‹readme.txtå†…å®¹
+  git reset --hard 3628164	//å›åˆ°æŒ‡å®šç‰ˆæœ¬ï¼ˆ3628164ä¸ºç‰ˆæœ¬å·çš„å‰å‡ ä½ï¼‰
+  git reflog		//è®°å½•çš„æ¯ä¸€æ¬¡å‘½ä»¤
+5.vim test.txt		//æ–°å»ºä»¶test.txtï¼Œå¹¶æ‰“å¼€
+  git diff HEAD -- readme.txt	//å¯¹æ¯”å½“å‰æ–‡ä»¶readme.txtçš„ä¸åŒ
+6.git checkout -- readme.txt	//æŠŠreadme.txtæ–‡ä»¶åœ¨å·¥ä½œåŒºçš„ä¿®æ”¹å…¨éƒ¨æ’¤é”€ï¼ˆå›åˆ°æœ€è¿‘ä¸€æ¬¡git commit æˆ– git add æ—¶çš„çŠ¶æ€ï¼‰
+  git reset HEAD readme.txt	//æŠŠreadme.txtæš‚å­˜åŒºçš„ä¿®æ”¹æ’¤é”€æ‰ï¼Œé‡æ–°æ”¾å›å·¥ä½œåŒº
+  rm test.txt			//åˆ é™¤test.txt
+  git rm test.txt		//ä»ç‰ˆæœ¬åº“ä¸­åˆ é™¤ï¼ˆgit commitæäº¤åˆ é™¤ï¼‰
+  git checkout -- test.txt	//æ¢å¤åˆ é™¤ï¼ˆgit checkout -- file ç”¨ç‰ˆæœ¬åº“çš„ç‰ˆæœ¬æ›¿æ¢å·¥ä½œåŒºçš„ç‰ˆæœ¬ï¼‰
+7.ssh-keygen -t rsa -C "Cdroc87@gmail.com"	//åˆ›å»ºSSH Keyï¼ˆ.sshç›®å½•->id_rsaç§é’¥ï¼Œid_rsa.pubå…¬é’¥ï¼‰
+8.touch test.txt		//åˆ›å»ºtest.txtæ–‡ä»¶
+  git remote add origin https://github.com/Cdroc/gitLearn.git	//åœ¨æœ¬åœ°æ·»åŠ è¿œç¨‹åº“origin
+  git push -u origin master	//æŠŠæœ¬åœ°åº“çš„æ‰€æœ‰å†…å®¹æ¨é€åˆ°è¿œç¨‹åº“ä¸Š
+  ï¼ˆç¬¬ä¸€æ¬¡æ¨é€masteråˆ†æ”¯æ—¶ï¼ŒåŠ -uï¼Œå¯ä»¥æŠŠæœ¬åœ°masterå’Œè¿œç¨‹masterå…³è”èµ·æ¥ï¼‰
+9.git clone https://github.com/Cdroc/gitLearn.git		//å…‹éš†è¿œç¨‹åº“åˆ°æœ¬åœ°åº“
+  ï¼ˆhttps://github.com/Cdroc/gitLearn.git é€Ÿåº¦æ…¢ï¼Œæ¯æ¬¡æ¨é€éƒ½å¿…é¡»è¾“å…¥å£ä»¤ï¼Œ
+    ï¼Ÿgit@github.com:Cdroc/gitLearn.git é»˜è®¤çš„git://ä½¿ç”¨ssh,é€šè¿‡sshæ”¯æŒçš„åŸç”Ÿgitåè®®é€Ÿåº¦æœ€å¿«ï¼‰
+10.git checkout -b dev		//åˆ›å»ºå¹¶åˆ‡æ¢åˆ°åˆ†æ”¯dev
+   git branch dev		//åˆ›å»ºåˆ†æ”¯dev
+   git checkout dev		//åˆ‡æ¢åˆ°åˆ†æ”¯dev
+   git branch			//æŸ¥çœ‹æ‰€æœ‰åˆ†æ”¯ï¼ˆå‰é¢æœ‰*å·çš„åˆ†æ”¯ä¸ºå½“å‰åˆ†æ”¯ï¼‰
+   git merge dev			//åˆå¹¶æŒ‡å®šåˆ†æ”¯åˆ°å½“å‰åˆ†æ”¯
+  ï¼ˆå…ˆæ‰§è¡Œgit branch master,åˆ‡æ¢åˆ°åˆ†æ”¯master,å†æ‰§è¡Œgit merge dev,åˆå¹¶æŒ‡å®šåˆ†æ”¯devåˆ°å½“å‰åˆ†æ”¯masterï¼‰
+   git branch -d dev		//åˆ é™¤devåˆ†æ”¯
+11.git log --graph --pretty=oneline --abbrev-commit	//æŸ¥çœ‹åˆ†æ”¯åˆå¹¶å›¾
+12.git merge --no-ff -m "merge with no-ff" dev	//åˆå¹¶æ—¶ï¼Œç¦ç”¨Fast forwardæ¨¡å¼
+   ï¼ˆåŠ ä¸Š--no-ffå‚æ•°å°±å¯ä»¥ç”¨æ™®é€šæ¨¡å¼åˆå¹¶ï¼Œåˆå¹¶åçš„å†å²æœ‰åˆ†æ”¯ï¼Œèƒ½çœ‹å‡ºæ›¾ç»åšè¿‡åˆå¹¶ï¼Œè€Œfast forwardåˆå¹¶å°±çœ‹ä¸å‡ºæ›¾ç»åšè¿‡åˆå¹¶ï¼‰
+   git log			//æŸ¥çœ‹åˆ†æ”¯å†å²
+13.git stash			//æŠŠå½“å‰å·¥ä½œç°åœºâ€œå‚¨è—â€èµ·æ¥
+   git stash list		//æŸ¥çœ‹å‚¨è—çš„å·¥ä½œç°åœº
+   git stash apply		//æ¢å¤å·¥ä½œç°åœºï¼Œä½†stashå†…å®¹å¹¶ä¸åˆ é™¤
+   git stash drop		//åˆ é™¤stashå‚¨è—çš„å·¥ä½œå†…å®¹
+   git stash pop		//æ¢å¤å·¥ä½œç°åœºçš„åŒæ—¶æŠŠstashå†…å®¹ä¹Ÿåˆ äº†
+   git stash apply stash@{0}	//æ¢å¤æŒ‡å®šçš„å·¥ä½œç°åœº
+14.git branch -D feature	//å¼ºè¡Œåˆ é™¤æœªåˆå¹¶çš„featureåˆ†æ”¯
