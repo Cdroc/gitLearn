@@ -77,3 +77,7 @@
    git config --global alias.last 'log -1'		//配置一个last别名，让其显示最后一次提交信息
    （加上--global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用，配置文件放在.git/config中）
    （当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中）
+20.git mv files1/ filse2/			//移动目录fils1到目录files2
+   git mv file1 file2/				//移动文件fils到目录files2
+   git commit -m "move files/file"	//提交
+   git push origin master			//更新到远程库
